@@ -40,6 +40,9 @@ INSTALLED_APPS = [
     'Users',
     'Project',
     'Tasks',
+    'rest_framework',
+    'Notification',
+    
   
 ]
 

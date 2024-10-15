@@ -14,7 +14,7 @@ class Project(models.Model):
     updated_at =models.DateTimeField(auto_now=True)
     status = models.CharField(max_length=20, choices=STATUS_CHOICES, default='NEW') 
     manager= models.ForeignKey(User,  on_delete= models.SET_NULL,null=True,related_name="managed_projects")
-    members = models.ManyToManyField(User, related_name="projects" )
+    team_members = models.ManyToManyField(User, related_name="projects" )
 
     def __str__(self):
         return self.name
